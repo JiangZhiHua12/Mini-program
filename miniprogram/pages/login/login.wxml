@@ -1,0 +1,41 @@
+<!--miniprogram/pages/login/login.wxml-->
+<view class="container">
+  <van-notify id="van-notify" />
+  <view class="content">
+  <van-cell-group>
+    <van-field
+    bind:clear="clear_name"
+    bind:blur="blur_username"
+    value="{{ username }}"
+    clearable
+    label="用户名"
+    icon="question-o"
+    placeholder="请输入用户名"
+    bind:click-icon="onClickIcon"
+       label-class="label"
+     input-class="input"
+     error-message="{{message_username}}"
+  />
+  <van-field
+  clearable
+  bind:clear="clear_pass"
+  bind:blur="blur_password"
+    value="{{ password }}"
+    type="password"
+    label="密码"
+    placeholder="请输入密码"
+    error-message="{{message_password}}"
+  />
+</van-cell-group>
+</view>
+<view class="btn">
+
+  <van-button  data-code="{{code}}"   bind:click="clickEvent" data-username="{{username}}" data-password="{{password}}"  type="info">登入</van-button>
+
+  <text class="zc" hover-class="hover" bindtap="registered">注册?</text>
+</view>
+
+  
+
+</view>
+

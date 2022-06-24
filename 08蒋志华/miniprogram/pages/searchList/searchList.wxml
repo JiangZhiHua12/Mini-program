@@ -1,0 +1,56 @@
+<view>
+  <van-notify id="van-notify" />
+  <van-dialog id="van-dialog" bind:confirm="confirm" />
+  <!--首页搜索-->
+  <van-search
+  value="{{value}}"
+  placeholder="请输入搜索关键词"
+  use-action-slot
+  bind:change="onChange"
+  bind:search="confirmTap"
+   focus="true"
+   background="#eb4450"
+> 
+  <view class="btn" slot="action" bind:tap="onClick">搜索</view>
+</van-search>
+
+<view class="kk" style="display:{{show}}">
+<view class="paln">
+  <block wx:for="{{serachList}}" wx:key="index">
+    <view class="List">
+      <van-icon name="search" />
+      <text>{{item.goods_name}}</text>
+    </view>
+  </block>
+  
+</view>
+</view>
+<view class="container"> 
+<view class="history">
+   <view class="his">
+     <text>历史搜索</text>
+     <van-icon bind:click="delete" name="delete-o" />
+  </view>
+  <view class="tags">
+   <block wx:for="{{tag}}" wx:key="index">
+   <view class="tag">
+    <van-tag
+    data-index="{{index}}"
+  closeable
+  size="medium"
+  type="primary"
+  id="primary"
+  bind:close="onClose"
+  round
+  color="gainsboro"
+  text-color="gary"
+  size="large"
+>
+  {{item.query}}
+</van-tag>
+   </view>
+  </block>
+</view>
+</view>
+</view>
+</view>

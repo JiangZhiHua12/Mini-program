@@ -1,0 +1,29 @@
+<view>
+  <view>
+    <van-tabs sticky active="{{ active }}" bind:change="onChange">
+  <van-tab title="宝贝">
+  <block wx:for="{{star}}" wx:key="index">
+    <view class="content">
+      <van-card
+      custom-class="content_"
+      thumb-class="img"
+      thumb-mode="widthFix"
+  price="{{item.goods_price}}"
+  title="{{item.goods_name}}"
+  thumb="{{item.goods_small_logo}}"
+/>
+    </view>
+  </block>
+  </van-tab>
+  <van-tab title="图文">
+
+  </van-tab>
+  <van-tab title="视频">
+
+  </van-tab>
+  <van-tab title="清单">
+
+  </van-tab>
+</van-tabs>
+  </view>
+</view>

@@ -1,0 +1,70 @@
+/* miniprogram/pages/searchList/searchList.wxss */
+.btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:orange;
+  border-radius: 15px;
+  width: 60px;
+  color: #fff;
+}
+.paln{
+z-index: 999;
+  display: flex;
+  flex: 1;
+  background-color:	#fff;
+  flex-direction: column;
+  border-top-right-radius: 20px;
+  border-top-left-radius:20px ;
+  
+ 
+}
+.List{
+  display: flex;
+ 
+align-items: center;
+  margin: 10px 20px;
+  font-size: 25rpx;
+  border-bottom: #ccc 1px solid;
+  height: 40px;
+}
+text{
+  margin: 0px 5px;
+}
+.haha{
+  display: flex;
+  flex: 1;
+  background-color: 	Silver;
+}
+.container{
+  background-color: gainsboro;
+  display: flex;
+   height: 548px;
+   position:fixed
+}
+.history{
+
+  background-color: white;
+  width: 100vw;
+  border-radius: 10px;
+  margin: 5px 0px;
+  height: 500px;
+}
+.his{
+  margin: 20px  10px;
+  display: flex;
+  justify-content: space-between;
+}
+.tag{
+  margin: 5px  10px;
+  
+}
+.tags{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.kk{
+  height: 548px;
+  background-color: gainsboro;
+}

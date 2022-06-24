@@ -1,0 +1,59 @@
+<!--miniprogram/pages/writerAddress/writerAddress.wxml-->
+<view>
+  <van-notify id="van-notify" />
+  <view>
+    <van-cell-group>
+  <van-field
+  bind:blur="blur_username"
+    value="{{username}}"
+    label="收货人"
+    placeholder="名字"
+  />
+  <van-field
+  bind:blur="blur_number"
+    value="{{phone}}"
+    label="手机号"
+    placeholder="手机号"
+    border="{{ false }}"
+  />
+  <van-field
+  bind:click="showPopup" 
+  bind:blur="blur_position"
+    value="{{position}}"
+    label="所在地区"
+    right-icon="location"
+    readonly="true"
+    border="{{ false }}"
+    bind:click-input="clickEvent"
+  />
+  <van-field
+  bind:blur="blur_message"
+    value="{{message}}"
+    label="详细地址"
+    type="textarea"
+    placeholder="详细地址"
+    autosize
+    border="{{ false }}"
+  />
+  <view class="set">
+    <text class="text">设置默认收货地址</text>
+  <van-switch checked="{{checked}}" bind:change="onChange" />
+  </view>
+
+</van-cell-group>
+
+<view>
+  <button data-username="{{username}}" data-number="{{number}}" data-position="{{position}}" data-message="{{message}}" data-checked="{{checked}}" bindtap="saveInfo" class="btn">保存</button>
+</view>
+
+  </view>
+
+
+ 
+
+
+  
+</view>
+<view class="bottom">
+    <van-popup show="{{ show }}" position="bottom" bind:close="onClose"><van-area bind:confirm="confirm" bind:cancel="cancel" area-list="{{areaList}}" /></van-popup>
+  </view>

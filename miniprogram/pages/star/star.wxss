@@ -1,0 +1,13 @@
+/* miniprogram/pages/star/star.wxss */
+.content{
+  width: 100vw;
+  height: 150px;
+}
+.img{
+  width: 50vw;
+  height: 50vh;
+}
+.content_{
+  height: 150px;
+  
+}

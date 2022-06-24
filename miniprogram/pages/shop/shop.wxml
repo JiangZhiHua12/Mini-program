@@ -1,0 +1,46 @@
+<view>
+  <van-notify id="van-notify" />
+  <!--首页搜索-->
+  <van-search value="{{ value }}" bind:focus="clickEvent"   bind:search="confirmTap"  placeholder="请输入搜索内容" background="#eb4450" />
+
+    <!--首页轮播-->
+  <view>
+  <swiper indicator-dots autoplay="true" interval="4000">
+  <swiper-item wx:for="{{swiperList}}" wx:key="goods_id">
+<navigator>
+  <image class="swiper_img" mode="widthFix" src="{{item.image_src}}"></image>
+</navigator>
+  </swiper-item>
+  </swiper>
+  </view>
+    <!--首页导航-->
+    <view>
+      <van-grid column-num="4" >
+  <van-grid-item  bindtap="{{cat}}" use-slot wx:for="{{cat_home}}" wx:key="index">
+    <image
+    style="width:80%;height:140rpx"
+      src="{{item.image_src}}"
+    />
+  </van-grid-item>
+</van-grid>
+    </view>
+    <!--首页内容-->
+       <!--分割线-->
+       <van-divider borderColor="#bbbb" />
+       <!--商品内容-->
+       <view>
+       
+        <block  wx:for="{{cat_info}}" wx:key="index">
+              <view class="title">
+                <image style="width:100vw;height:100rpx" src="{{item.floor_title.image_src}}"></image>
+              </view>
+
+              <view class="block_one">
+                <navigator  class="{{index2===0? 'one': 'tow'}}" wx:for="{{item.product_list}}" wx:for-index="index2" wx:for-item="items" wx:key="index2">
+                  <image class="{{index2===0? 'one': 'tow'}}" src="{{items.image_src}}"></image>
+                </navigator>
+              </view>
+        </block>
+
+       </view>
+</view>

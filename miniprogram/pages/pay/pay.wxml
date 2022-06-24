@@ -1,0 +1,43 @@
+<!--miniprogram/pages/pay/pay.wxml-->
+<view class="container">
+<view class="address" bindtap="clickEvent">
+  <view class="icon">
+    <van-icon color="red" name="location" />
+  </view>
+  <view class="content">
+    <view class="text">
+    <text class="text_">{{position}}{{message}}</text>
+  </view>
+  <view class="xx">
+    <view class="name">{{username}}</view>
+    <view class="number">{{number}}</view>
+  </view>
+  </view>
+
+  
+  <view class="icon_">
+    <van-icon color="gainsboro" name="arrow" />
+  </view>
+</view>
+
+<block wx:for="{{checkedProduct}}" wx:key="index">
+  <view class="product"> 
+    <view>
+      <van-card
+  num="{{item.num}}"
+  price="{{item.goods_price}}"
+  title="{{item.goods_name}}"
+  thumb="{{item.goods_small_logo}}"
+/> 
+    </view>
+  </view>
+</block>
+
+<view>
+  <van-submit-bar
+  price="{{total}}"
+  button-text="提交订单"
+  bind:submit="onSubmit"
+/>
+</view>
+</view>

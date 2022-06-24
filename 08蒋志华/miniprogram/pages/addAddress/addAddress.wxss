@@ -1,0 +1,55 @@
+/* miniprogram/pages/addAddress/addAddress.wxss */
+.container{
+  background-color:gainsboro;
+  width: 100vw;
+  height: 100vh;
+}
+.plus{
+  position: relative;left: 80px;
+}
+.address{
+  background-color:white;
+  display: flex;
+  flex-direction: column;
+  width: 95vw;
+  margin: 10px 0px;
+  align-items: center;
+  border-radius: 10px;
+
+  
+}
+.icon{
+  margin: 0px 10px;
+  color:
+    red;
+}
+.content{
+  margin: 10px 5px;
+
+}
+.name{
+  font-weight: bold;
+  font-size: 18px;
+}
+.number{
+  color: #bbbbbb;
+  font-size: 15px;
+  margin: 0px 5px;
+}
+.xx{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px 0px;
+  height: 60px;
+  width: 340.24px;
+}
+.cc{
+  margin: 5px;
+}
+.tag_one{
+  display: inline;
+}
+.tag_tow{
+  display:none;
+}

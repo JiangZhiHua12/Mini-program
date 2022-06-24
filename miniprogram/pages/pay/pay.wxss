@@ -1,0 +1,52 @@
+/* miniprogram/pages/pay/pay.wxss */
+.container{
+  display: flex;
+  align-items: center;
+  background: gainsboro;
+  height: 100vh;
+}
+.address{
+  width: 95vw;
+  background-color: white;
+  display: flex;
+  justify-content:  space-between;
+  align-items: center;
+  height: 100px;
+  border-radius: 15px;margin: 10px 0px;
+}
+.text{
+  width: 300px;
+}
+.xx{
+  display: flex;
+  flex-direction:row ;
+  margin: 8px 0px;
+}
+.content{
+  display: flex;
+  flex-direction: column;
+}
+.text_{
+  font-weight: bold;
+}
+.name{
+  font-size: 14px;
+  color: red;
+}
+.number{
+  font-size: 14px;
+  color: red;
+  margin: 0px 5px;
+}
+.icon{
+  margin: 0px 10px;
+}
+.icon_{
+  margin-right: 15px;
+  
+}
+.product{
+  width: 95vw;
+  border-radius: 10px;
+  margin-bottom:10px ;
+}

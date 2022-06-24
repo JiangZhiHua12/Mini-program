@@ -1,0 +1,56 @@
+.footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  font-size: 20px;
+
+}
+.btn1{
+  width: 30px;
+  height: 30px;
+  background-color: #bbbbbb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5rpx;
+  margin: 0px 10px;
+
+}
+.btn2{
+  background-color: #bbbbbb;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5rpx;
+
+}
+.box{
+  position: relative;
+  left: -240px;
+  
+  border-radius: 50%;
+}
+.content{
+  margin-bottom:80px ;
+}
+.dete{
+  display: flex;
+  flex-direction: column;
+  width: 80px;
+  height: 134px;
+  background-color:red;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dete text{
+    font-size:18px ;
+    font-weight: weight;
+    margin: 10px 0px;
+}
+.c{
+  border-bottom: 2px solid #bbbbbb;
+}

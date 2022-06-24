@@ -1,0 +1,32 @@
+
+
+<view>
+<view class="container">
+
+    <van-sidebar class="sidebar" style="width:80px;" active-key="{{ activeKey }}" bind:change="onChange">
+<block wx:for="{{cat_List}}" wx:key="index" bind:change='change' id="{{index}}">
+  <van-sidebar-item   title="{{item.cat_name}}" /> 
+</block>
+</van-sidebar>
+
+<view class="content">
+  <block  wx:for="{{cat_List[detail].children}}" wx:for-item="items" wx:for-index="index2" wx:key="index2">
+    <view class="block">
+     <text class="title">{{items.cat_name}}</text>
+     <view class="content_one">
+       <block  wx:for="{{cat_List[detail].children[index2].children}}" wx:for-item="items3" wx:for-index="index3" wx:key="index3">
+         <view class="hah" bindtap="clickEvent" data-id="{{items3.cat_id}}">
+          <image class="content_image" src="{{items3.cat_icon}}"></image>
+         <text style="font-size:25rpx">{{items3.cat_name}}</text>
+         </view>
+        
+       </block>
+     </view>
+    </view>
+  </block>
+</view>
+
+</view>
+</view>
+
+

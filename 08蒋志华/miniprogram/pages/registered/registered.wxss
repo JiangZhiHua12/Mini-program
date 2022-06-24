@@ -1,0 +1,16 @@
+/* miniprogram/pages/registered/registered.wxss */
+.btn{
+  margin: 20px 0px;
+}
+.btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.zc{
+  font-size: 25rpx;
+  color:blue;
+  
+   position: relative;top: 17px;left: 20px;
+   
+}

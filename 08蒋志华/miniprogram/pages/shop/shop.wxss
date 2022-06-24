@@ -1,0 +1,40 @@
+
+.swiper_img{
+  width: 100%;
+}
+swiper{
+  width: 750rpx;
+  height: 340rpx;
+}
+.divider{
+  height: 100px;
+  background-color:red;
+}
+.daohan{
+  width: 100%;
+  height: 100rpx;
+}
+
+.one{
+  display: block;
+  float: left;
+  width:225rpx;
+  height: 505rpx;
+}
+.tow{
+  width: 225rpx;
+  height: 250rpx;
+  display: block;
+  float: left;
+  margin: 0rpx 5rpx;
+  margin-bottom:5rpx ;
+}
+.block_one{
+margin: 30rpx 20rpx;
+margin-bottom: 20rpx;
+height:252px
+}
+.title{
+  margin:40rpx 20rpx;
+}
+

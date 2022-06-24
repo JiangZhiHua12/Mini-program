@@ -1,0 +1,52 @@
+<view >
+
+    <van-search value="{{detail}}" placeholder="请输入搜索内容"bind:search="confirmTap"   background="#eb4450"/>
+
+   
+
+
+   <view >
+
+      <van-tabs sticky swipeable active="{{active}}" bind:change="onChange">
+
+  <van-tab title="综合">
+<block  wx:for="{{productList}}" wx:key="index">
+<view  bindtap="clickEvent"
+ data-index="{{index}}"
+data-id="{{item.goods_id}}">
+<van-card
+price="{{item.goods_price}}"
+title="{{item.goods_name}}"
+thumb="{{item.goods_small_logo}}"
+/>
+</view>
+<van-divider borderColor="#bbbbbb" />
+</block>
+</van-tab>
+
+
+<van-tab title="价格">
+<block  wx:for="{{priceList}}" wx:key="index">
+<view  bindtap="clickEvent"
+data-index="{{index}}"
+data-id="{{item.goods_id}}">
+<van-card
+price="{{item.goods_price}}"
+title="{{item.goods_name}}"
+thumb="{{item.goods_small_logo}}"
+/>
+</view>
+<van-divider borderColor="#bbbbbb" />
+</block>
+</van-tab>
+<van-tab title="销量">
+<view>hh</view>
+</van-tab>
+</van-tabs>
+
+      
+
+
+   </view>
+</view>
+

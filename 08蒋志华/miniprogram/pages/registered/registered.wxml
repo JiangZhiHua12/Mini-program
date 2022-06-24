@@ -1,0 +1,34 @@
+<view class="content">
+  <van-notify id="van-notify" />
+  <view>
+    <van-cell-group>
+  <van-field
+
+    value="{{username}}"
+    required
+    clearable
+    label="用户名"
+    icon="question-o"
+    placeholder="请输入用户名"
+    bind:click-icon="onClickIcon"
+    error-message="{{message_username}}"
+    bind:blur="blur_username"
+  />
+
+  <van-field
+    value="{{password}}"
+    type="password"
+    label="密码"
+    placeholder="请输入密码"
+    required
+    error-message="{{message_password}}"
+    border="{{ false }}"
+    bind:blur="blur_password"
+  />
+</van-cell-group>
+  </view>
+<view class="btn">
+  <van-button bind:click="clickEvent" data-name="{{username}}" data-pass="{{password}}" data-username="{{message_username}}" data-password="{{message_password}}" type="info">注册</van-button>
+  <text  class="zc"  bindtap="login">已有账号？登入</text>
+</view>
+</view>

@@ -1,0 +1,37 @@
+<!--miniprogram/pages/addAddress/addAddress.wxml-->
+<view class="container">
+
+<view class="address">
+  <block wx:for="{{Info}}" wx:key="index">
+    <view class="xx" bindtap="clickEvent" data-index="{{index}}">
+    <view class="icon">
+    <van-icon name="wap-home-o" />
+  </view>
+
+  <view class="content">
+    <view>
+    <text class="name">{{item.username}}</text>
+   <text class="number">{{item.number}}</text>
+   <view class="{{index==0? 'tag_one' : 'tag_tow'}}">
+    <van-tag type="danger">{{tag}}</van-tag>
+   </view>
+  
+  </view>
+    <view class="cc" >
+      <text>{{item.position}}{{item.message}}</text>
+    </view>
+  </view>
+</view>
+  </block>
+  
+
+</view>
+
+  <view>
+   <van-goods-action>
+   <view class="plus">
+    <van-goods-action-button icon="plus" text="添加收货地址" bind:click="onClickButton" />
+   </view>
+</van-goods-action>
+  </view>
+</view>

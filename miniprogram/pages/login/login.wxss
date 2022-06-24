@@ -1,0 +1,26 @@
+/* miniprogram/pages/login/login.wxss */
+.content{
+  width: 90vw;
+  border-radius: 20px;
+  background-color: azure;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ height: 80vh;
+}
+.btn{
+  margin: 20px 0px;
+  border-radius: 10px;
+}
+.zc{
+  font-size: 25rpx;
+  color:blue;
+  
+   position: relative;top: 17px;left: 20px;
+   
+}
+.hover{
+  color: red;
+}
