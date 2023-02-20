@@ -12,7 +12,7 @@ Page({
 wx.navigateTo({
   url: 'pages/category/category',
 })
-  },
+  }, 
   confirmTap(e){
     console.log(e)
           if(e.detail===""){
@@ -37,7 +37,7 @@ wx.navigateTo({
     var username = getApp().globalData.showDialog
     console.log(username)
   
-      if(username!=undefined){
+      if(username!==undefined){
         Notify({ type: 'success', message: '欢迎您'+username });
       }
     //轮播图数据

@@ -45,7 +45,7 @@ clickEvent(e){
       message_password:""
     }) 
     console.log('123sds')
-  }else if(pass==undefined || pass==""){
+  }else if(pass==undefined || pass=="" ){
     this.setData({
       message_username:"",
       message_password:"密码不能为空"
@@ -64,7 +64,7 @@ if(Obj.length==0){
   } else{
    
       wx.request({
-        url: `https://api-hmugo-web.itheima.net/api/public/v1/users/wxlogin?rawData=${Obj[0].username}&&encryptedData=${Obj[0].username}&&iv=${Obj[0].username}&&signature=${Obj[0].username}&&code=${Obj[0].username}`,
+        url: `api/public/v1/users/wxlogin?rawData=${Obj[0].username}&&encryptedData=${Obj[0].username}&&iv=${Obj[0].username}&&signature=${Obj[0].username}&&code=${Obj[0].username}`,
         success:res=>{
           console.log(res)
         }
@@ -107,6 +107,9 @@ clear_pass(){
    */
   onLoad: function (options) {
       console.log(options)
+      if(options.query=="ok"){
+        Notify({ type: 'success', message: '退出成功！！' });
+      }
       var message=options.message
       if(message!=undefined){
         Notify({ type: 'success', message: '注册成功！！' });

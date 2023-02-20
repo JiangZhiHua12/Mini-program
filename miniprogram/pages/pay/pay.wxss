@@ -29,7 +29,7 @@
 .text_{
   font-weight: bold;
 }
-.name{
+.name{     
   font-size: 14px;
   color: red;
 }
@@ -50,3 +50,6 @@
   border-radius: 10px;
   margin-bottom:10px ;
 }
+.container{
+  margin-bottom: 120px;
+} 

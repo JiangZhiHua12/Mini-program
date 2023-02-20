@@ -10,10 +10,12 @@
 .content{
   display: flex;
   flex: 1;
-  height: 1800px;
+  height: 100vh;
   flex-direction: column;
   justify-items: center;
-  align-items:center
+  align-items:center;
+ position: relative;
+  
 }
 .block{
   margin: 10px 0px;
@@ -38,4 +40,8 @@
 }
 .title{
   position: relative;left: 110px;
+}
+.top{
+  width:80px;
+  height: 100vh;
 }

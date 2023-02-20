@@ -5,12 +5,48 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    consignee_addr:""
   },
   clickEvent(){
 wx.navigateTo({
   url: '../addAddress/addAddress',
 })
+  },
+  onSubmit(){
+    var token="Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIzLCJpYXQiOjE1NjQ3MzAwNzksImV4cCI6MTAwMTU2NDczMDA3OH0.YPt-XeLnjV-_1ITaXGY2FhxmCe4NvXuRnRB8OMCfnPo"
+    var header={Authorizeation:token}
+   var ShopCar=wx.getStorageSync('shopCar')||[]
+   console.log(ShopCar)
+   var data2=ShopCar.filter(item=>{
+     return  item.ischecked==true
+   })
+    
+   var total=null
+      data2.forEach(item=>{
+         total+=item.goods_price
+      })
+
+   var order_price=total
+   var consignee_addr=this.consignee_addr
+   var goods=data2
+  var goods_=[]
+  goods.forEach(item=>goods_.push({
+    goods_id:item.goods_id,
+    goods_number:item.num,
+    goods_price:item.goods_price
+  }))
+  const orderParams={order_price,consignee_addr,goods_};
+ wx.request({
+     url: 'https://api-hmugo-web.itheima.net/api/public/v1/my/orders/create',
+     data:orderParams,
+     method:"POST",
+     header:header,
+     success:res=>{
+       console.log(res)
+     }
+     
+   })
+   console.log(data2)
   },
   /**
    * 生命周期函数--监听页面加载
@@ -53,6 +89,7 @@ wx.navigateTo({
               message:Info[0].message,
               ischecked:Info[0].ischecked
              })
+             consignee_addr=position+message
              console.log('h3aha')
            }else if(options.username){
             this.setData({
@@ -73,8 +110,6 @@ wx.navigateTo({
              }) 
              console.log('haha')
            }
-
-     
           },
 
   /**

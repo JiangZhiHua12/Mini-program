@@ -43,6 +43,9 @@ confirm(){
      
    
        var query=e.detail
+       this.setData({
+         query:e.detail
+       })
        wx.request({
          url: `https://api-hmugo-web.itheima.net/api/public/v1/goods/search?query=${query}&&pagenum=${1}&&pagesize=${8}`,
          success:res=>{
@@ -73,6 +76,20 @@ confirm(){
             })
           }
   }, 
+  Jump(e){
+
+    var query=e.currentTarget.dataset.query
+    wx.navigateTo({
+      url: `../productList/productList?query=${query}`,
+    })
+       
+  },
+  tag(e){
+    var query=e.currentTarget.dataset.query
+    wx.navigateTo({
+      url: `../productList/productList?query=${query}`,
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

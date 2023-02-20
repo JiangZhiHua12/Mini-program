@@ -92,11 +92,12 @@ star(e){
         this.setData({
           color:"orangered"
         })
-       }
+       }  
    wx.request({
      url: `https://api-hmugo-web.itheima.net/api/public/v1/goods/detail?goods_id=${options.id}`,
+     
      success:res=>{
-       
+      console.log("ok")
        this.setData({
          dateil:res.data.message.pics,
          dateilInfo:res.data.message,

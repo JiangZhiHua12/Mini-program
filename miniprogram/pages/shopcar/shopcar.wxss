@@ -33,7 +33,7 @@
   border-radius: 50%;
 }
 .content{
-  margin-bottom:80px ;
+  margin-bottom:102px ;
 }
 .dete{
   display: flex;

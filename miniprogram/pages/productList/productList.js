@@ -77,12 +77,19 @@ Page({
      }})
     }
 else{
+
+
   var history=wx.getStorageSync('history')||[]
-  var obj={
-    query:options.query
-  }
-  history.push(obj)
-  wx.setStorageSync('history', history)
+    var index=history.findIndex(item=>item.query==options.query)
+    console.log(index)
+    if(index==-1){
+      var obj={
+        query:options.query
+      }
+      history.push(obj)
+      wx.setStorageSync('history', history)
+    }
+
   wx.request({
     url: `https://api-hmugo-web.itheima.net/api/public/v1/goods/search?query=${options.query}&&pagenum=${1}&&pagesize=${100}`,
     success:res=>{

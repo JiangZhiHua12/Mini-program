@@ -14,7 +14,7 @@ Page({
   },
   loginout(){
     wx.redirectTo({
-      url: '../login/login',
+      url: '../login/login?query=ok',
     })
   },
   /**

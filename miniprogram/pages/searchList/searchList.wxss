@@ -39,8 +39,9 @@ text{
 .container{
   background-color: gainsboro;
   display: flex;
-   height: 548px;
-   position:fixed
+   height: 100vh;
+   position:fixed;
+   flex:1
 }
 .history{
 
@@ -65,6 +66,15 @@ text{
   flex-wrap: wrap;
 }
 .kk{
-  height: 548px;
+  height: 100vh;
   background-color: gainsboro;
+}
+.page{
+  width: 100vw;
+  height: 100vh;
+}
+.tor{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

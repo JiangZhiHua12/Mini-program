@@ -1,4 +1,4 @@
-<view>
+<view class="page">
   <van-notify id="van-notify" />
   <van-dialog id="van-dialog" bind:confirm="confirm" />
   <!--首页搜索-->
@@ -10,14 +10,14 @@
   bind:search="confirmTap"
    focus="true"
    background="#eb4450"
-> 
+>  
   <view class="btn" slot="action" bind:tap="onClick">搜索</view>
 </van-search>
 
 <view class="kk" style="display:{{show}}">
 <view class="paln">
   <block wx:for="{{serachList}}" wx:key="index">
-    <view class="List">
+    <view class="List"  bindtap="Jump" data-query="{{query}}">
       <van-icon name="search" />
       <text>{{item.goods_name}}</text>
     </view>
@@ -33,7 +33,7 @@
   </view>
   <view class="tags">
    <block wx:for="{{tag}}" wx:key="index">
-   <view class="tag">
+   <view class="tag" >
     <van-tag
     data-index="{{index}}"
   closeable
@@ -45,8 +45,11 @@
   color="gainsboro"
   text-color="gary"
   size="large"
+
 >
+<view class="tor"   bindtap="Jump" data-query="{{item.query}}">
   {{item.query}}
+</view>
 </van-tag>
    </view>
   </block>
